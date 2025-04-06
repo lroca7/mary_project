@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Header.scss';
+import { Link } from 'react-router-dom';
 
 const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -35,8 +36,8 @@ const Header: React.FC = () => {
           </div>
         )}
         <ul className={menuOpen ? 'show' : ''}>
-          <li><a href="/" onClick={() => setMenuOpen(false)}>Inicio</a></li>
-          <li><a href="/about" onClick={() => setMenuOpen(false)}>Acerca de mí</a></li>
+          <li><Link to="/" onClick={() => setMenuOpen(false)}>Inicio</Link></li>
+          <li><Link to="/about" onClick={() => setMenuOpen(false)}>Acerca de mí</Link></li>
           <li><a href="/contact" onClick={() => setMenuOpen(false)}>Contacto</a></li>
         </ul>
       </nav>
