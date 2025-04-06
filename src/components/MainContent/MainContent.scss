@@ -1,6 +1,11 @@
-@import '../styles/variables.scss';
+@import '../../styles/variables.scss';
 
 .main-content {
   margin-top: 70px;
   padding: $spacing-md;
+  
+  @media (max-width: $breakpoint-md) {
+    margin-top: 60px;
+    padding: $spacing-sm;
+  }
 }
