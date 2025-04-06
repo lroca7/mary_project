@@ -1,0 +1,61 @@
+@use '../../styles/variables' as v;
+
+.hobbies-section {
+  h3 {
+    font-size: 1.8rem;
+    color: v.$color-primary;
+    margin-bottom: v.$spacing-md;
+    border-bottom: 2px solid v.$color-primary;
+    padding-bottom: v.$spacing-xs;
+    
+    @media (max-width: v.$breakpoint-md) {
+      font-size: 1.5rem;
+    }
+  }
+  
+  .hobbies-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: v.$spacing-md;
+    
+    @media (max-width: v.$breakpoint-sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .hobby-item {
+    display: flex;
+    align-items: flex-start;
+    background-color: white;
+    border-radius: v.$border-radius;
+    padding: v.$spacing-md;
+    box-shadow: v.$box-shadow;
+    transition: transform 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-5px);
+    }
+    
+    .hobby-icon {
+      font-size: 2.5rem;
+      margin-right: v.$spacing-sm;
+      min-width: 50px;
+      text-align: center;
+    }
+    
+    .hobby-content {
+      flex: 1;
+      
+      h4 {
+        color: v.$color-primary;
+        margin: 0 0 v.$spacing-xs;
+        font-size: 1.2rem;
+      }
+      
+      p {
+        margin: 0;
+        color: v.$color-text-dark;
+      }
+    }
+  }
+}

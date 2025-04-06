@@ -1,0 +1,80 @@
+@use '../../styles/variables' as v;
+
+.experience-section {
+  h3 {
+    font-size: 1.8rem;
+    color: v.$color-primary;
+    margin-bottom: v.$spacing-md;
+    border-bottom: 2px solid v.$color-primary;
+    padding-bottom: v.$spacing-xs;
+    
+    @media (max-width: v.$breakpoint-md) {
+      font-size: 1.5rem;
+    }
+  }
+  
+  .experience-items {
+    display: flex;
+    flex-direction: column;
+    gap: v.$spacing-md;
+  }
+  
+  .experience-item {
+    background-color: white;
+    border-radius: v.$border-radius;
+    padding: v.$spacing-md;
+    box-shadow: v.$box-shadow;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .experience-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: v.$spacing-xs;
+      flex-wrap: wrap;
+      
+      h4 {
+        color: v.$color-text-dark;
+        font-size: 1.2rem;
+        margin: 0;
+        
+        @media (max-width: v.$breakpoint-md) {
+          font-size: 1.1rem;
+        }
+      }
+      
+      .experience-period {
+        background-color: v.$color-primary;
+        color: white;
+        padding: 0.2rem 0.6rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+      }
+    }
+    
+    .experience-company {
+      color: v.$color-primary-dark;
+      font-weight: 600;
+      margin-bottom: v.$spacing-xs;
+    }
+    
+    .experience-description {
+      padding-left: 1.5rem;
+      margin: v.$spacing-xs 0 0;
+      
+      li {
+        margin-bottom: 0.5rem;
+        color: v.$color-text-dark;
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
