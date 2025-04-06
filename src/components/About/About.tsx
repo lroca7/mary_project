@@ -1,8 +1,8 @@
 import React from 'react';
 import './About.scss';
 import Education from './Education';
-import Hobbies from './Hobbies';
 import Experience from './Experience';
+import Hobbies from './Hobbies';
 
 const About: React.FC = () => {
   return (
