@@ -9,6 +9,10 @@
   border-top: 1px solid v.$color-background-dark;
 
   color: v.$color-text-dark;
+
+  @media (max-width: v.$breakpoint-md) {
+    padding-top: 60px; // Añadir espacio para evitar superposición con el header
+  }
   
   h2 {
     color: v.$color-primary;
@@ -24,6 +28,5 @@
     
     margin-bottom: v.$spacing-sm;
   }
-   
-  
 }
+
