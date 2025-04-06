@@ -2,11 +2,14 @@
 
 .app-main {
   flex: 1;
-  padding: v.$spacing-lg;
+  // padding: v.$spacing-lg;
   width: 100%;
   margin: 0 auto;
   background-color: v.$color-background-light;
   border-top: 1px solid v.$color-background-dark;
+
+  color: v.$color-text-dark;
+  
   h2 {
     color: v.$color-primary;
     margin-bottom: v.$spacing-md;
