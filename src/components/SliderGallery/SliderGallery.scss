@@ -11,7 +11,7 @@
   .slider-container {
     position: relative;
     width: 100%;
-    height: 400px; // Altura fija para el slider
+    height: 700px; // Altura fija para el slider
     
     .slide {
       position: absolute;
@@ -20,7 +20,7 @@
       width: 100%;
       height: 100%;
       background-size: cover;
-      background-position: top;
+      background-position: top center;
       object-fit: cover; // Asegura que las imágenes cubran todo el espacio
       opacity: 0;
       transition: opacity 0.5s ease-in-out;

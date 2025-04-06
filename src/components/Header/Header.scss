@@ -7,8 +7,9 @@
   box-shadow: v.$box-shadow;
   display: flex;
   align-items: center;
+  height: 70px;
   h1 {
-    margin: 0 v.$spacing-sm v.$spacing-sm 0;
+    margin: 0 v.$spacing-xl 0 0;
     color: v.$color-text-dark;
   }
   
