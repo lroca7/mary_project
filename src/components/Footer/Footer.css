@@ -1,0 +1,13 @@
+.app-footer {
+  background-color: #282c34;
+  padding: 1rem;
+  color: white;
+  margin-top: auto;
+}
+
+@media (prefers-color-scheme: light) {
+  .app-footer {
+    background-color: #f5f5f5;
+    color: #213547;
+  }
+}

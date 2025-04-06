@@ -1,0 +1,63 @@
+@use '../variables' as v;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: v.$font-primary;
+  line-height: 1.6;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: v.$color-background-dark;
+    color: v.$color-text-light;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: v.$color-background-light;
+    color: v.$color-text-dark;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: v.$font-secondary;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: v.$spacing-sm;
+}
+
+a {
+  text-decoration: none;
+  color: v.$color-primary;
+  transition: color 0.3s ease;
+  
+  &:hover {
+    color: v.$color-primary-dark;
+  }
+}
+
+button {
+  cursor: pointer;
+  padding: v.$spacing-xs v.$spacing-md;
+  background-color: v.$color-primary;
+  color: v.$color-text-light;
+  border: none;
+  border-radius: v.$border-radius;
+  font-family: v.$font-primary;
+  transition: background-color 0.3s ease;
+  
+  &:hover {
+    background-color: v.$color-primary-dark;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

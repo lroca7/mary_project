@@ -1,0 +1,59 @@
+// Variables globales
+$font-primary: 'Roboto', sans-serif;
+$font-secondary: 'Open Sans', sans-serif;
+
+// Paleta de colores
+$color-primary: #646cff;
+$color-primary-dark: #4d52c7;
+$color-secondary: #61dafb;
+$color-text-light: #f5f5f5;
+$color-text-dark: #213547;
+$color-background-dark: #282c34;
+$color-background-light: #f5f5f5;
+$color-background-accent: #e8e8e8;
+$color-background-secondary: #262F72;
+
+
+// Espaciado
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 1.5rem;
+$spacing-lg: 2rem;
+$spacing-xl: 3rem;
+
+// Bordes y sombras
+$border-radius: 8px;
+$box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+// Breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// Mixins útiles
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin responsive-text {
+  font-size: 16px;
+  
+  @media (max-width: $breakpoint-md) {
+    font-size: 14px;
+  }
+}
+
+@mixin dark-mode {
+  @media (prefers-color-scheme: dark) {
+    @content;
+  }
+}
+
+@mixin light-mode {
+  @media (prefers-color-scheme: light) {
+    @content;
+  }
+}

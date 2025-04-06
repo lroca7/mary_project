@@ -1,0 +1,19 @@
+@use '../../styles/variables' as v;
+
+.app-footer {
+  background-color: v.$color-background-secondary;
+  padding: v.$spacing-sm;
+  color: v.$color-text-light;
+  margin-top: auto;
+  
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .app-footer {
+    background-color: v.$color-background-light;
+    color: v.$color-text-dark;
+  }
+}
