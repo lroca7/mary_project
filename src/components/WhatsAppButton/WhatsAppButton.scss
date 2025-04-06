@@ -1,0 +1,59 @@
+@use '../../styles/variables' as v;
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #25D366;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  padding: 0;
+  
+  &:hover {
+    transform: scale(1.1);
+    background-color: #20c25b;
+  }
+  
+  .whatsapp-icon {
+    width: 35px;
+    height: 35px;
+    color: white;
+  }
+  
+  /* Animación pulsante */
+  animation: pulse 2s infinite;
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+    }
+    70% {
+      box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+  }
+  
+  /* Ajustes para dispositivos móviles */
+  @media (max-width: v.$breakpoint-md) {
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+    
+    .whatsapp-icon {
+      width: 28px;
+      height: 28px;
+    }
+  }
+}
