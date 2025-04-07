@@ -38,7 +38,7 @@ const Header: React.FC = () => {
         <ul className={menuOpen ? 'show' : ''}>
           <li><Link to="/" onClick={() => setMenuOpen(false)}>Inicio</Link></li>
           <li><Link to="/about" onClick={() => setMenuOpen(false)}>Acerca de mí</Link></li>
-          <li><a href="/contact" onClick={() => setMenuOpen(false)}>Contacto</a></li>
+          <li><Link to="/contact" onClick={() => setMenuOpen(false)}>Contacto</Link></li>
         </ul>
       </nav>
     </header>
